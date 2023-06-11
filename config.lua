@@ -9,9 +9,11 @@ lvim.builtin.which_key.mappings["ç"] = {
 }
 
 lvim.plugins = {
-  { "lunarvim/colorschemes" },
-  { "wakatime/vim-wakatime"},
-  { 'jose-elias-alvarez/typescript.nvim' },
-  { 'mg979/vim-visual-multi' },
-  { 'folke/trouble.nvim'}
+   { "lunarvim/colorschemes" },
+   { "wakatime/vim-wakatime"},
+   { 'TovarishFin/vim-solidity'},
+   {'nvim-treesitter/nvim-treesitter'}
+  --{ 'jose-elias-alvarez/typescript.nvim' },
+  --{ 'mg979/vim-visual-multi' },
+
 }

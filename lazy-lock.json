@@ -40,10 +40,8 @@
   "telescope.nvim": { "branch": "0.1.x", "commit": "9de317bdea2bc393074651179c4fc7f93e9b2d56" },
   "toggleterm.nvim": { "branch": "main", "commit": "68fdf851c2b7901a7065ff129b77d3483419ddce" },
   "tokyonight.nvim": { "branch": "main", "commit": "c5df636ce62a8aab7565f35da143cfd672526302" },
-  "trouble.nvim": { "branch": "main", "commit": "2af0dd9767526410c88c628f1cbfcb6cf22dd683" },
-  "typescript.nvim": { "branch": "main", "commit": "5b3680e5c386e8778c081173ea0c978c14a40ccb" },
   "vim-illuminate": { "branch": "master", "commit": "a2907275a6899c570d16e95b9db5fd921c167502" },
-  "vim-visual-multi": { "branch": "master", "commit": "724bd53adfbaf32e129b001658b45d4c5c29ca1a" },
+  "vim-solidity": { "branch": "master", "commit": "d7a2cc77a635ffea81b29dd2f966fc788ae643d7" },
   "vim-wakatime": { "branch": "master", "commit": "018fa9a80c27ccf2a8967b9e27890372e5c2fb4f" },
   "which-key.nvim": { "branch": "main", "commit": "4acffc92953a90a790603bfdab7c92319ab167b1" }
 }
