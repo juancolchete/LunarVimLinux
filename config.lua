@@ -13,7 +13,8 @@ configs.solidity = {
 }
 
 lspconfig.solidity.setup {}
-
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.builtin.which_key.mappings["ç"] = {
   name = "+Trouble",
   l = {"<cmd>TroubleToggle<cr>","General panel"},
