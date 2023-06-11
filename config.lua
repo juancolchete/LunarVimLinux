@@ -1,3 +1,19 @@
+lvim.builtin.nvimtree.setup.filters.custom = { }
+
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig.configs'
+
+configs.solidity = {
+  default_config = {
+    cmd = {'nomicfoundation-solidity-language-server', '--stdio'},
+    filetypes = { 'solidity' },
+    root_dir = lspconfig.util.find_git_ancestor,
+    single_file_support = true,
+  },
+}
+
+lspconfig.solidity.setup {}
+
 lvim.builtin.which_key.mappings["ç"] = {
   name = "+Trouble",
   l = {"<cmd>TroubleToggle<cr>","General panel"},
@@ -9,11 +25,9 @@ lvim.builtin.which_key.mappings["ç"] = {
 }
 
 lvim.plugins = {
-   { "lunarvim/colorschemes" },
-   { "wakatime/vim-wakatime"},
-   { 'TovarishFin/vim-solidity'},
-   {'nvim-treesitter/nvim-treesitter'}
-  --{ 'jose-elias-alvarez/typescript.nvim' },
-  --{ 'mg979/vim-visual-multi' },
-
+   { 'lunarvim/colorschemes' },
+   { 'wakatime/vim-wakatime'},
+   { 'folke/trouble.nvim' },
+   { 'jose-elias-alvarez/typescript.nvim' },
+   { 'mg979/vim-visual-multi' }
 }
