@@ -12,7 +12,7 @@ configs.solidity = {
   },
 }
 
-lspconfig.solidity.setup {}
+lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.builtin.which_key.mappings["ç"] = {
