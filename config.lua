@@ -12,9 +12,12 @@ configs.solidity = {
   },
 }
 
+lvim.keys.normal_mode["<S-f>"] = ":Telescope live_grep<CR>"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<C-a>"] = "ggVG"
+
 lvim.builtin.which_key.mappings["ç"] = {
   name = "+Trouble",
   l = {"<cmd>TroubleToggle<cr>","General panel"},
