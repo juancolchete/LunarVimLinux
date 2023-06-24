@@ -18,7 +18,8 @@ lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<space>'"] = ":Lizard<CR>"
 lvim.keys.normal_mode["<C-a>"] = "ggVG"
-
+lvim.keys.normal_mode["<C-s>"] = "zfa]"
+lvim.keys.normal_mode["<C-z>"] = "zfa}"
 lvim.builtin.which_key.mappings["ç"] = {
   name = "+Trouble",
   l = {"<cmd>TroubleToggle<cr>","General panel"},
