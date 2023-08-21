@@ -1,3 +1,4 @@
+--lvim.builtin.alpha.active = false
 lvim.builtin.nvimtree.setup.filters.custom = { }
 
 local lspconfig = require 'lspconfig'
@@ -38,5 +39,6 @@ lvim.plugins = {
    { 'jose-elias-alvarez/typescript.nvim' },
    { 'mg979/vim-visual-multi' },
    { 'juancolchete/lizard'},
-   { 'brooth/far.vim'}
+   { 'brooth/far.vim'},
+   --{'juancolchete/alpha-nvim'}
 }

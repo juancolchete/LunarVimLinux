@@ -8,7 +8,7 @@ local header = {
   type = "text",
   val = require("user.banners").dashboard(),
   opts = {
-    position = "left",
+    position = "center",
     hl = "Comment",
   },
 }
@@ -18,6 +18,15 @@ local date = os.date("%a %d %b")
 local plugin_count = {
   type = "text",
   val = "└─ " .. kind.cmp_kind.Module .. " " .. plugins .. " plugins in total ─┘",
+  opts = {
+    position = "center",
+    hl = "String",
+  },
+}
+
+local org = {
+  type = "text",
+  val = "[COLCHETE DAO]",
   opts = {
     position = "center",
     hl = "String",
@@ -88,14 +97,12 @@ local buttons = {
     button("c", " " .. kind.icons.settings .. " Config", ":e ~/.config/lvim/config.lua<CR>"),
     button("C", " " .. kind.cmp_kind.Color .. " Colorscheme Config", ":e ~/.config/lvim/lua/user/colorscheme.lua<CR>"),
     button("q", " " .. kind.icons.exit .. " Quit", ":q<CR>"),
-  },
-  opts = {
-    spacing = 1,
-  },
+  }
 }
 
 local section = {
   header = header,
+  org = org,
   heading = heading,
   buttons = buttons,
   plugin_count = plugin_count,
@@ -106,6 +113,7 @@ lvim.builtin.alpha.custom = {
   config = {
     layout = {
       section.header,
+      section.org,
       section.heading,
       section.plugin_count,
       section.buttons,
