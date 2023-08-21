@@ -86,7 +86,7 @@ local buttons = {
   type = "group",
   val = {
     button("f", " " .. kind.cmp_kind.Folder .. " Explore", ":Telescope find_files<CR>"),
-    button("e", " " .. kind.cmp_kind.File .. " New file", ":ene <BAR> startinsert <CR>"),
+    button("n", " " .. kind.cmp_kind.File .. " New file", ":ene <BAR> startinsert <CR>"),
     button("s", " " .. kind.icons.magic .. " Restore", ":lua require('persistence').load()<cr>"),
     button(
       "g",
