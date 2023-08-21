@@ -87,6 +87,7 @@ local buttons = {
   val = {
     button("f", " " .. kind.cmp_kind.Folder .. " Explore", ":Telescope find_files<CR>"),
     button("n", " " .. kind.cmp_kind.File .. " New file", ":ene <BAR> startinsert <CR>"),
+    button("p", " " .. lvim.icons.ui.Project .. " Projects", "<CMD>Telescope projects<CR>"),
     button("s", " " .. kind.icons.magic .. " Restore", ":lua require('persistence').load()<cr>"),
     button(
       "g",
