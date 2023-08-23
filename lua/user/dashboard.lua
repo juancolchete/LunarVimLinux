@@ -13,7 +13,7 @@ local header = {
   },
 }
 
-local plugins = ""
+local plugins = #lvim.plugins
 local date = os.date("%a %d %b")
 local plugin_count = {
   type = "text",
