@@ -156,7 +156,7 @@ M.dashboard = function()
     "                                                                 ",
     }
   }
-  return headers[8]
+  return headers[5]
 end
 
 return M

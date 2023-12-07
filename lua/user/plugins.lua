@@ -4,6 +4,8 @@ lvim.builtin.nvimtree.setup.filters.custom = { }
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 
+vim.opt.shell = "tmux";
+
 configs.solidity = {
   default_config = {
     cmd = {'nomicfoundation-solidity-language-server', '--stdio'},
@@ -39,6 +41,6 @@ lvim.plugins = {
    { 'jose-elias-alvarez/typescript.nvim' },
    { 'mg979/vim-visual-multi' },
    { 'juancolchete/lizard'},
-   { 'brooth/far.vim'},
+   { 'brooth/far.vim'}
    --{'juancolchete/alpha-nvim'}
 }
