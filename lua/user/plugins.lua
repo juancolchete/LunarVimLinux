@@ -4,7 +4,7 @@ lvim.builtin.nvimtree.setup.filters.custom = { }
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 
-vim.opt.shell = "tmux";
+vim.opt.shell = "bash";
 
 configs.solidity = {
   default_config = {
