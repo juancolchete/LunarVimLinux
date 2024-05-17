@@ -3,9 +3,18 @@ lvim.builtin.nvimtree.setup.filters.custom = { }
 
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
+local formatters = require "lvim.lsp.null-ls.formatters"
 
 vim.opt.shell = "bash";
 
+formatters.setup {
+  { name = "black" },
+  {
+    name = "prettier",
+    args = { "--print-width", "128","--plugin", "prettier-plugin-solidity","--tab-width","2" },
+    filetypes = { "solidity","typescript" },
+  },
+}
 configs.solidity = {
   default_config = {
     cmd = {'nomicfoundation-solidity-language-server', '--stdio'},
@@ -14,6 +23,8 @@ configs.solidity = {
     single_file_support = true,
   },
 }
+
+
 
 lvim.keys.normal_mode["<S-f>"] = ":Telescope live_grep<CR>"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
@@ -41,6 +52,14 @@ lvim.plugins = {
    { 'jose-elias-alvarez/typescript.nvim' },
    { 'mg979/vim-visual-multi' },
    { 'juancolchete/lizard'},
-   { 'brooth/far.vim'}
-   --{'juancolchete/alpha-nvim'}
+   { 'brooth/far.vim'},
+  --{'juancolchete/alpha-nvim'}
+}
+
+local ctime = require("user.ctime")
+local cdate = require("user.cdate")
+
+lvim.builtin.lualine.sections.lualine_c = {
+  ctime,
+  cdate
 }
