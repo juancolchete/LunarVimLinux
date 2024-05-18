@@ -14,9 +14,9 @@ end)
 CTimeLine.update_status = function(self)
   IDLE = math.floor((os.time()-lastKeyStroke)/60)
   if(IDLE>1) then
-    ctimeInfo = "🕒"..os.date(self.options.format or "%H:%M:%S", os.time()).." 💤"..IDLE
+    ctimeInfo = "🕒 "..os.date(self.options.format or "%H:%M:%S", os.time()).." 💤"..IDLE
   else
-    ctimeInfo = "🕒"..os.date(self.options.format or "%H:%M:%S", os.time())
+    ctimeInfo = "🕒 "..os.date(self.options.format or "%H:%M:%S", os.time())
   end
   return ctimeInfo
 end

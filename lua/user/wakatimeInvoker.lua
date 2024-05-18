@@ -16,7 +16,7 @@ wakatimeInvoker.update_status = function(self)
     lastRun= os.time()
     entered=true
   end
-  return string.sub(wakatime,0,string.len(wakatime)-1)
+  return "📟 "..string.sub(wakatime,0,string.len(wakatime)-1)
 end
 
 return wakatimeInvoker
