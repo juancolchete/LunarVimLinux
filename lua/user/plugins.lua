@@ -11,7 +11,7 @@ formatters.setup {
   {
     name = "prettier",
     args = { "--print-width", "128","--plugin", "prettier-plugin-solidity","--tab-width","2" },
-    filetypes = { "solidity" },
+    filetypes = { "solidity","typescript" },
   },
 }
 configs.solidity = {
@@ -32,6 +32,8 @@ lvim.keys.normal_mode["<F2>"] = "<cmd>ToggleTerm direction=float<CR>"
 lvim.keys.term_mode["<F2>"] = "<cmd>ToggleTerm direction=float<CR>"
 lvim.keys.normal_mode["<F3>"] = "<cmd>ToggleTerm direction=horizontal<CR>"
 lvim.keys.term_mode["<F3>"] = "<cmd>ToggleTerm direction=horizontal<CR>"
+lvim.keys.normal_mode["<F4>"] = "<cmd>ToggleTerm direction=vertical<CR>"
+lvim.keys.term_mode["<F4>"] = "<cmd>ToggleTerm direction=vertical<CR>"
 lvim.keys.visual_mode["<space>v"] = "g<C-G>"
 lvim.keys.normal_mode["<C-a>"] = "ggVG"
 lvim.keys.normal_mode["<C-s>"] = "zfa]"
