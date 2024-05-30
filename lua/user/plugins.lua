@@ -8,7 +8,6 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 vim.opt.shell = "bash";
 
 formatters.setup {
-  { name = "black" },
   {
     name = "prettier",
     args = { "--print-width", "128","--plugin", "prettier-plugin-solidity","--tab-width","2" },
@@ -24,13 +23,13 @@ configs.solidity = {
   },
 }
 
-
-
 lvim.keys.normal_mode["<S-f>"] = ":Telescope live_grep<CR>"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<space>'"] = ":Lizard<CR>"
+lvim.keys.normal_mode["<F2>"] = "<cmd>ToggleTerm direction=float<CR>"
+lvim.keys.term_mode["<F2>"] = "<cmd>ToggleTerm direction=float<CR>"
 lvim.keys.visual_mode["<space>v"] = "g<C-G>"
 lvim.keys.normal_mode["<C-a>"] = "ggVG"
 lvim.keys.normal_mode["<C-s>"] = "zfa]"
