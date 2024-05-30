@@ -11,7 +11,7 @@ formatters.setup {
   {
     name = "prettier",
     args = { "--print-width", "128","--plugin", "prettier-plugin-solidity","--tab-width","2" },
-    filetypes = { "solidity","typescript" },
+    filetypes = { "solidity" },
   },
 }
 configs.solidity = {
