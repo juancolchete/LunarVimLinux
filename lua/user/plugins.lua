@@ -34,6 +34,7 @@ lvim.keys.visual_mode["<space>v"] = "g<C-G>"
 lvim.keys.normal_mode["<C-a>"] = "ggVG"
 lvim.keys.normal_mode["<C-s>"] = "zfa]"
 lvim.keys.normal_mode["<C-z>"] = "zfa}"
+
 lvim.builtin.which_key.mappings["ç"] = {
   name = "+Trouble",
   l = {"<cmd>TroubleToggle<cr>","General panel"},
