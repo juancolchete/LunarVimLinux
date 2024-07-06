@@ -5,7 +5,7 @@ local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 local formatters = require "lvim.lsp.null-ls.formatters"
 
-vim.opt.shell = "bash";
+vim.opt.shell = "fish";
 
 formatters.setup {
   {
