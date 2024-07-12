@@ -41,7 +41,7 @@ end
 
 wakatimeInvoker.update_status = function(self)
   if entered == false or os.time() > lastRun + timeout then
-    local openPop = assert(io.popen('~/.wakatime/wakatime-cli --today', 'r'))
+    local openPop = assert(io.popen('timeout 2 ~/.wakatime/wakatime-cli --today', 'r'))
     wakatime = openPop:read('*all')
     openPop:close()
     lastRun= os.time()
