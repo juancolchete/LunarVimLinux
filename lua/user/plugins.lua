@@ -4,9 +4,11 @@ lvim.builtin.nvimtree.setup.filters.custom = { }
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 local formatters = require "lvim.lsp.null-ls.formatters"
-
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "eslint", filetypes = { "typescript", "typescriptreact" } }
+}
 vim.opt.shell = "fish";
-
 formatters.setup {
   {
     name = "prettier",
@@ -57,6 +59,7 @@ lvim.plugins = {
    { 'mg979/vim-visual-multi' },
    { 'juancolchete/lizard'},
    { 'brooth/far.vim'},
+   { 'simrat39/rust-tools.nvim' }
   --{'juancolchete/alpha-nvim'}
 }
 
