@@ -66,6 +66,5 @@ local ctime = require("user.ctime")
 local cdate = require("user.cdate")
 lvim.builtin.lualine.sections.lualine_c = {
   ctime,
-  cdate,
-  wakatime
+  cdate
 }
