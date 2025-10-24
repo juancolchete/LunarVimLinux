@@ -59,7 +59,6 @@ lvim.plugins = {
    { 'juancolchete/lizard'},
    { 'brooth/far.vim'},
    { 'simrat39/rust-tools.nvim' }
-  --{'juancolchete/alpha-nvim'}
 }
 
 local ctime = require("user.ctime")
