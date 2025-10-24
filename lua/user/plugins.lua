@@ -53,7 +53,6 @@ lvim.builtin.which_key.mappings["ç"] = {
 
 lvim.plugins = {
    { 'lunarvim/colorschemes' },
-   { 'wakatime/vim-wakatime'},
    { 'folke/trouble.nvim' },
    { 'jose-elias-alvarez/typescript.nvim' },
    { 'mg979/vim-visual-multi' },
