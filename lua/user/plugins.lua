@@ -64,7 +64,6 @@ lvim.plugins = {
 
 local ctime = require("user.ctime")
 local cdate = require("user.cdate")
-local wakatime = require("user.wakatimeInvoker")
 lvim.builtin.lualine.sections.lualine_c = {
   ctime,
   cdate,
