@@ -1,29 +1,28 @@
 --lvim.builtin.alpha.active = false
 lvim.builtin.nvimtree.setup.filters.custom = { }
-
-local lspconfig = require 'lspconfig'
-local configs = require 'lspconfig.configs'
-local formatters = require "lvim.lsp.none-ls.formatters"
-local linters = require "lvim.lsp.none-ls.linters"
-linters.setup {
-  { command = "eslint", filetypes = { "typescript", "typescriptreact" } }
-}
 vim.opt.shell = "fish";
-formatters.setup {
-  {
-    name = "prettier",
-    args = { "--print-width", "128","--plugin", "prettier-plugin-solidity","--tab-width","2" },
-    filetypes = { "solidity" },
+local lspconfig = require("lspconfig")
+
+lspconfig.solidity.setup({
+  cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+  filetypes = { "solidity" },
+  root_dir = lspconfig.util.root_pattern(
+    "hardhat.config.js",
+    "hardhat.config.ts",
+    "foundry.toml",
+    "remappings.txt",
+    "truffle-config.js",
+    ".git"
+  ),
+  settings = {
+    solidity = {
+      includePath = "",
+      remapping = {},
+    },
   },
-}
-configs.solidity = {
-  default_config = {
-    cmd = {'nomicfoundation-solidity-language-server', '--stdio'},
-    filetypes = { 'solidity' },
-    root_dir = lspconfig.util.find_git_ancestor,
-    single_file_support = true,
-  },
-}
+  on_attach = require("lvim.lsp").common_on_attach,
+  capabilities = require("lvim.lsp").common_capabilities(),
+})
 
 lvim.keys.normal_mode["<S-f>"] = ":Telescope live_grep<CR>"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
