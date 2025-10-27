@@ -3,8 +3,8 @@ lvim.builtin.nvimtree.setup.filters.custom = { }
 
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
-local formatters = require "lvim.lsp.null-ls.formatters"
-local linters = require "lvim.lsp.null-ls.linters"
+local formatters = require "lvim.lsp.none-ls.formatters"
+local linters = require "lvim.lsp.none-ls.linters"
 linters.setup {
   { command = "eslint", filetypes = { "typescript", "typescriptreact" } }
 }
@@ -58,7 +58,7 @@ lvim.plugins = {
    { 'mg979/vim-visual-multi' },
    { 'juancolchete/lizard'},
    { 'brooth/far.vim'},
-   { 'simrat39/rust-tools.nvim' }
+   { 'simrat39/rust-tools.nvim' },
 }
 
 local ctime = require("user.ctime")
