@@ -1,2 +1,2 @@
 # Lunar VIM Linux
-Main goal is to make available my custom configuration of lunarvim
+Main goal is to make available my custom configuration of lunarvim, with less telemetry as possible 
